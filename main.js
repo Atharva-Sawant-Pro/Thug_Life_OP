@@ -15,9 +15,9 @@ function setup(){
 function gotPoses(results){
     if (results.length>0){
         console.log(results);
-        noseX=results[0].pose.nose.x-51.5;
+        noseX=results[0].pose.nose.x-50.5;
         console.log("noseX="+noseX);
-        noseY=results[0].pose.nose.y-70;
+        noseY=results[0].pose.nose.y-80;
         console.log("noseY="+noseY);
     }
     
@@ -27,7 +27,7 @@ function modelLoaded(){
 }
 function draw(){
 image(video,0,0,300,300);
-image(laser_eye,noseX,noseY,100,100);
+image(laser_eye,noseX,noseY,100,125);
 }
 function take_snapshot(){
     save("Extremo_Funnyo.png");
